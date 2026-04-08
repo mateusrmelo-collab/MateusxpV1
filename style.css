@@ -1,0 +1,275 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-image: url(mattxp.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.apps img{
+    height: 50px;
+    width: 50px;
+}
+
+.apps{
+    height: auto;
+    width: 300px;
+    font-size: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.apps{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 12px;
+}
+
+.app img{
+    display: flex;
+    justify-self: center;
+}
+
+.erro {
+    width: 350px;
+    background-color: lightgray;
+    border: 2px solid blue;
+    border-radius: 8px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 4px 0 #000080;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    background-color: blue;
+    color: white;
+    padding: 0 8px;
+    height: 40px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.top h2 {
+    margin: 0;
+    font-size: 16px;
+    line-height: 40px; 
+}
+
+.btn-top button {
+    height: 24px;
+    width: 24px;
+    background-color: crimson;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+
+.btn-top button:hover {
+    background-color: #ff5555;
+}
+
+.baixo {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 15px;
+    font-size: 14px;
+}
+
+.p {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.p img {
+    width: 35px;
+    height: 35px;
+}
+
+.p p {
+    margin: 0;
+}
+
+.btn-baixo button {
+    width: 80px;
+    height: 30px;
+    background-color: #e1e1e1;
+    border: 1px solid #7f9db9;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-baixo button:active {
+    border-style: inset;
+}
+
+.footer-xp {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to top, #245edb, #3a6ee8);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.3);
+    border-top:2px solid #3e3eb9;
+}
+
+.start {
+    background: linear-gradient(to bottom, #3cb043, #2e8b3c);
+    color: white;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
+}
+
+.start:hover {
+    filter: brightness(1.1);
+}
+
+.taskbar {
+    display: flex;
+    gap: 5px;
+    flex: 1;
+    margin: 0 10px;
+}
+
+.task {
+    background-color: #d6e3ff;
+    border: 1px solid #7f9db9;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.clock {
+    color: white;
+    font-size: 12px;
+}
+
+.documento{
+    display: none;
+}
+
+.erro {
+    position: fixed;
+    cursor: default;
+}
+
+.top {
+    cursor: move; 
+}
+
+.calculadora {
+   position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 280px;
+  border: 2px solid #000080;
+  border-radius: 6px;
+  background-color: #ececec;
+  box-shadow: 4px 4px 0 #000080;
+  display: none;
+}
+
+.top {
+  background-color: #245edb;
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.top button {
+    height: 24px;
+    width: 24px;
+    background-color: crimson;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+
+.top button:hover {
+    background-color: #ff5555;
+}
+
+.display {
+  background: white;
+  border: 1px inset #7f9db9;
+  margin: 10px;
+  padding: 5px;
+  text-align: right;
+  font-size: 20px;
+  min-height: 30px;
+}
+
+.teclado {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  padding: 10px;
+}
+
+.teclado button {
+  height: 40px;
+  font-size: 14px;
+  border: 1px solid #7f9db9;
+  background-color: #e1e1e1;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.teclado button:active {
+  border-style: inset;
+}
+
+    
+
