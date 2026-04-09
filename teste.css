@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  background: black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+
+@keyframes mover {
+  0% { left: -80px; }
+  100% { left: 220px; }
+}
+
+img{
+    width: 400px;
+    height: auto;
+}

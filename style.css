@@ -271,5 +271,127 @@ body{
   border-style: inset;
 }
 
+.barra a{
+    margin: 0;
+    padding: 2px;
+    text-decoration: none;
+    color: black;
+    height: 7px;
+}
+
+.barra a:hover{
+    background-color: #1042ac;
+    color: white;
+}
+
+.barra{
+    border-bottom: 1px solid black;
+    padding-bottom: 1px;
+    padding-top: 1px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.barra img{
+    margin-right: 8px;
+    padding-top: 5px;
+}
+
+.voltar, .avancar{
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    gap: 5px;
+}
+
+.docs {
+    width: 700px;
+    background-color: lightgray;
+    border: 2px solid blue;
+    border-radius: 8px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 4px 0 #000080;
+}
+
+.btes  {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;      
+  border: 1.5px solid rgba(255,255,255,0.6);
+  background: linear-gradient(to right, #21c937, #0cca1b, #07d344);
+  box-shadow:
+    inset 0 1px 2px rgba(255,255,255,0.6),
+    inset 0 -2px 4px rgba(0,0,0,0.2),
+    0 2px 5px rgba(0,0,0,0.3);
+  cursor: pointer;
+  font-size: 18px;
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.terceira{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-top: 2px;
+    border-bottom: 1px solid black;
+    height: 45px;
+}
+
+.quarta{
+    border-bottom: 1px solid black;
+}
+
+.down{
+    display: flex;
+}
+
+.sidebar{
+    background-color: #3399ff;
+    width: 300px;
+}
+
+.conteudo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.conteudo h1, p{
+    display: flex;
+    justify-content: center;
+}
+
+.avancar button:hover,
+.voltar button:hover {
+    background: linear-gradient(to bottom, #cce6ff, #99ccff); 
+    border: 1px solid #3399ff;
+    box-shadow: inset 1px 1px 2px #ffffff, inset -1px -1px 2px #6699cc;
+    cursor: pointer;
+}
+
+.avancar button:active,
+.voltar button:active {
+    background-color: #99ccff;      
+    border: 1px solid #0066cc;      
+    box-shadow: inset 2px 2px 3px #003366;
+}
+
+.docs{
+    display: none;
+}
+
+
+
+
     
 

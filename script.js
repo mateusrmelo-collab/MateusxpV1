@@ -11,6 +11,7 @@ const calcApp = document.getElementById('calcApp');
 const calcWindow = document.querySelector('.calculadora'); 
 const closeBtn = calcWindow.querySelector('.top button'); 
 
+
 appDocumentos.addEventListener("click", (e) => {
     e.preventDefault(); 
     janela.style.display = "block";
@@ -117,5 +118,40 @@ calcApp.addEventListener('click', (e) => {
 
 closeBtn.addEventListener('click', () => {
   calcWindow.style.display = 'none'; 
+});
+
+const barraErro = document.querySelector(".erro .top");
+
+barraErro.addEventListener("mousedown", (e) => {
+    isDragging = true;
+
+    offsetX = e.clientX - janelaDrag.offsetLeft;
+    offsetY = e.clientY - janelaDrag.offsetTop;
+});
+
+const calc = document.getElementById("calc");
+const calcTop = document.getElementById("calcTop");
+
+let isDraggingCalc = false;
+let offsetXCalc, offsetYCalc;
+
+calcTop.addEventListener("mousedown", (e) => {
+    isDraggingCalc = true;
+
+    offsetXCalc = e.clientX - calc.offsetLeft;
+    offsetYCalc = e.clientY - calc.offsetTop;
+
+    calc.style.transform = "none";
+});
+
+document.addEventListener("mousemove", (e) => {
+    if (isDraggingCalc) {
+        calc.style.left = (e.clientX - offsetXCalc) + "px";
+        calc.style.top = (e.clientY - offsetYCalc) + "px";
+    }
+});
+
+document.addEventListener("mouseup", () => {
+    isDraggingCalc = false;
 });
 

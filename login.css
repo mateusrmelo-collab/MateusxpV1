@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to right, #3833aa, #032e9e);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+main{
+    height: 600px;
+    width: 100%;
+    background-color: #597cda;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.logo img{
+    height: 200px;
+    width: auto;
+}
+
+.esquerda{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.esquerda img{
+    height: 200px;
+    width: auto;
+    padding-right: 10px;
+}
+
+.esquerda {
+  position: relative;
+  padding: 20px;
+}
+
+.esquerda::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgb(224, 210, 210), rgb(224, 210, 210), transparent);
+}
+
+main {
+  border: 5px solid transparent; 
+  border-image: linear-gradient(to right, transparent, #A9C5FF, #A9C5FF, transparent) 1 stretch;
+}
+
+.account img{
+    height: 100px;
+    width: 100px;
+    margin-bottom: 20px;
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
+.account a {
+  display: flex;          
+  align-items: center;  
+  gap: 15px;               
+  text-decoration: none;  
+  color: white;
+   opacity: 0.5;
+  transition: opacity 0.3s ease;  
+}
+
+.account a h3 {
+  margin: 0;               
+  font-size: 18px;       
+}
+
+.account a:hover {
+  opacity: 1;
+}
+
+.account.hidden {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.account.up {
+  transform: translateY(-50px) scale(1.2);
+  opacity: 1;
+  transition: all 0.6s ease;
+}
+
